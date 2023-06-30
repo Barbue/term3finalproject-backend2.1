@@ -2,14 +2,14 @@
 const mongoose = require("mongoose");
 const { v4: uuidv4 } = require("uuid");
 
-//create a expressionSchema
-const expressionSchema = new mongoose.Schema({
-  theme: String,
-  expression: String,
-  literaltranslation: String,
-  metaphoricaltranslation: String,
+//create a wordSchema
+const favoriteWordSchema = new mongoose.Schema({
+  word: String,
+  partOfSpeech: String,
+  translation: String,
+  exampleSentence: String,
   createdBy: String,
-  context: String,
+  comments: String,
   createdById: { type: String, default: uuidv4 },
   createdAt: { type: Date, default: Date.now },
   lastModified: Date,
@@ -19,7 +19,7 @@ const expressionSchema = new mongoose.Schema({
 // { type: Date, default: Date.now},
 
 //register model to collection
-const Expression = mongoose.model("expressions", expressionSchema);
+const favoriteWord = mongoose.model("favoritewords",favoriteWordSchema);
 
 //make our model accessible to outside files
-module.exports = Expression;
+module.exports = favoriteWord;

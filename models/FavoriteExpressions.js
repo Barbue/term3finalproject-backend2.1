@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const { v4: uuidv4 } = require("uuid");
 
 //create a expressionSchema
-const expressionSchema = new mongoose.Schema({
+const favoriteExpressionSchema = new mongoose.Schema({
   theme: String,
   expression: String,
   literaltranslation: String,
@@ -19,7 +19,7 @@ const expressionSchema = new mongoose.Schema({
 // { type: Date, default: Date.now},
 
 //register model to collection
-const Expression = mongoose.model("expressions", expressionSchema);
+const favoriteExpression = mongoose.model("favoriteexpressions", favoriteExpressionSchema);
 
 //make our model accessible to outside files
-module.exports = Expression;
+module.exports = favoriteExpression;

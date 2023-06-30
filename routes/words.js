@@ -10,6 +10,7 @@ router.post("/create-one", WordsController.createOneWord);
 router.get("/get-one/:idToGet", WordsController.getOneWordById);
 router.put("/update-one/:idToUpdate", WordsController.updateOneWord);
 router.delete("/delete-one/:idToDelete", WordsController.deleteOneWordById);
+//router.put("/update-one/:idToUpdate", WordsController.updateOneWord);
 
 
 

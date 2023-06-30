@@ -21,7 +21,11 @@ mongooseConnect();
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var wordsRouter = require("./routes/words");
-var expressionsRouter = require("./routes/expressions.js");
+var expressionsRouter = require("./routes/expressions");
+var verbsRouter = require("./routes/verbs");
+var favoriteWordsRouter = require("./routes/favoritewords");
+var favoriteExpressionsRouter = require("./routes/favoriteExpressions");
+var favoriteVerbsRouter = require("./routes/favoriteVerbs");
 
 var app = express();
 
@@ -53,6 +57,10 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/words", wordsRouter);
 app.use("/expressions", expressionsRouter);
+app.use("/verbs", verbsRouter);
+app.use("/favoritewords", favoriteWordsRouter);
+app.use("/favoriteexpressions", favoriteExpressionsRouter);
+app.use("/favoriteverbs", favoriteVerbsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
